@@ -1,5 +1,5 @@
 {
-  "name": "Iridium",
+  "name": "iridium",
   "version": "1.0.0",
   "description": "Iridium is a complete Web Browser built with Electron and TOR",
   "main": "index.js",
