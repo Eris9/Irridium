@@ -1,32 +1,21 @@
 {
   "name": "iridium",
   "version": "1.0.0",
-  "description": "Iridium is a complete Web Browser built with Electron and TOR",
-  "main": "index.js",
+  "description": "Iridium is a complete Web Browser built for complete privacy and unbeatable speed",
   "scripts": {
-    "start": "electron ./source/index.js",
-    "start:dev": "nodemon --watch * --exec 'npm run start'"
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mrchirub/Iridium.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mrchirub/Iridium/issues"
-  },
-  "homepage": "https://github.com/mrchirub/Iridium#readme",
+  "keywords": [
+    "electron",
+    "browser",
+    "webview",
+    "react"
+  ],
+  "author": "Chiru B <chirub@foretag.co>",
+  "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.4.0",
-    "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.4.2",
-    "electron": "^5.0.0-beta.7",
-    "electron-nightly": "^6.0.0-nightly.20190311",
-    "electron-packager": "^13.1.1",
-    "electron-reload": "^1.4.0",
-    "nodemon": "^1.18.10"
-  }
+    "electron-prebuilt": "^0.28.2"
+  },
+  "dependencies": {}
 }
