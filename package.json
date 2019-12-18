@@ -15,8 +15,8 @@
   ],
   "author": "Chiru B <chirub@foretag.co>",
   "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
-    "electron-prebuilt": "^0.28.2"
-  },
-  "dependencies": {}
+    "electron": "^7.1.6"
+  }
 }

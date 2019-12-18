@@ -1,13 +1,11 @@
 'use strict'
-var remote = require('remote')
-var Menu = remote.require('menu')
-var MenuItem = remote.require('menu-item')
-var clipboard = require('clipboard')
+const { remote, clipboard } = require('electron')
+const { Menu, MenuItem } = remote
 var urllib = require('url')
 
 function createPageObject (location) {
   return {
-    location: location||'http://3g2upl4pq6kufc4m.onion/',
+    location: location||'https://3g2upl4pq6kufc4m.onion/',
     statusText: false,
     title: 'new tab',
     isLoading: false,
