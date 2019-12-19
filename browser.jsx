@@ -219,7 +219,7 @@ var BrowserChrome = React.createClass({
       // update state
       var webview = this.getWebView(pageIndex)
       page.statusText = false
-      page.location = webview.getUrl()
+      page.location = webview.getURL()
       page.canGoBack = webview.canGoBack()
       page.canGoForward = webview.canGoForward()
       if (!page.title)
@@ -230,7 +230,7 @@ var BrowserChrome = React.createClass({
     onPageTitleSet: function (e) {
       var page = this.getPageObject()
       page.title = e.title
-      page.location = this.getWebView().getUrl()
+      page.location = this.getWebView().getURL()
       this.setState(this.state)
     },
     onContextMenu: function (e, page, pageIndex) {
@@ -249,7 +249,7 @@ var BrowserChrome = React.createClass({
 
   render: function() {
     var self = this
-    return <div>
+    return <div className={'browser-chrome2'}>
       <BrowserTabs ref="tabs" pages={this.state.pages} currentPageIndex={this.state.currentPageIndex} {...this.tabHandlers} />
       <BrowserNavbar ref="navbar" {...this.navHandlers} page={this.state.pages[this.state.currentPageIndex]} />
       {this.state.pages.map(function (page, i) {
