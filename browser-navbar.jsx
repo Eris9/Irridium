@@ -9,8 +9,11 @@ var BrowserNavbarLocation = React.createClass({
   onKeyDown: function (e) {
 
     if (e.keyCode == 13)
-      if (e.target.value.startsWith('https://') || e.target.value.startsWith('https://www.'))
-        this.props.onEnterLocation(e.target.value)
+      if (e.target.value.match(/^(?:(?:(?:[a-zA-z\-]+)\:\/{1,3})?(?:[a-zA-Z0-9])(?:[a-zA-Z0-9-\.]){1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+|\[(?:(?:(?:[a-fA-F0-9]){1,4})(?::(?:[a-fA-F0-9]){1,4}){7}|::1|::)\]|(?:(?:[0-9]{1,3})(?:\.[0-9]{1,3}){3}))(?:\:[0-9]{1,5})?/))
+        if (!e.target.value.startsWith('https://'))
+          this.props.onEnterLocation('https://' + e.target.value)
+        else
+          this.props.onEnterLocation(e.target.value)
       else
         this.props.onEnterLocation('https://duckduckgo.com/?q=' + e.target.value)
 
