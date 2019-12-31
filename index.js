@@ -1,5 +1,7 @@
-const { app, BrowserWindow, session } = require('electron')
+const { app, BrowserWindow, session } = require('electron') //ES5
+
 app.commandLine.appendSwitch('proxy-server', 'socks5://127.0.0.1:9050')
+
 var mainWindow = null
 
 app.on('window-all-closed', function () {
@@ -21,17 +23,28 @@ app.on('ready', function () {
 
 	})
 	
+	// session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
+	// 	callback({ 
+	// 		responseHeaders: Object.assign({
+	// 			"Content-Security-Policy": [ "default-src 'self'; script-src 'sha256-Jn5I+BB3vYJLolQ8WAbK5x/634RemOeC63UpaZP8poM='" ]
+	// 		  }, details.responseHeaders)	
+	// 	})
+	// })
+
 	mainWindow = new BrowserWindow({
 		width: 1030, 
 		height: 720, 
-		frame: false, 
+		frame: false,
+		transparent: true,
 		webPreferences: { 
 			nodeIntegration: true,
 			webSecurity: true,
 			webviewTag: true
 		}
 	})
+
 	mainWindow.loadURL('file://' + require('path').join(__dirname, 'browser.html'))
+
 	mainWindow.webContents.openDevTools()
 	mainWindow.on('closed', function () {
 		mainWindow = null
