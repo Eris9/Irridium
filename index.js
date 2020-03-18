@@ -1,6 +1,6 @@
 const { app, BrowserWindow, session } = require('electron') //ES5
 
-app.commandLine.appendSwitch('proxy-server', 'socks5://127.0.0.1:9050')
+// app.commandLine.appendSwitch('proxy-server', 'socks5://127.0.0.1:9050')
 
 var mainWindow = null
 
@@ -45,7 +45,7 @@ app.on('ready', function () {
 
 	mainWindow.loadURL('file://' + require('path').join(__dirname, 'browser.html'))
 
-	mainWindow.webContents.openDevTools()
+	// mainWindow.webContents.openDevTools()
 	mainWindow.on('closed', function () {
 		mainWindow = null
 	})
