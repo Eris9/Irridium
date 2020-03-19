@@ -1,13 +1,16 @@
 var BrowserTab = React.createClass({
 	render: function () {
 		var title = this.props.page.title || 'loading'
-		return <div className={this.props.isActive ? 'active' : ''} title={title} onClick={this.props.onClick} onContextMenu={this.props.onContextMenu}>
-			<span>
-				{title}
-				{this.props.page.isLoading ? <i className='ri-loader-3-line' /> : undefined}
-			</span>
-			<a onClick={this.props.onClose}><i className='ri-close-line' /></a>
-		</div>
+		return (
+			<div className={this.props.isActive ? 'active' : ''} title={title} onClick={this.props.onClick} onContextMenu={this.props.onContextMenu}>
+				<img className='tab__favicon' src={this.props.page.favicon} />
+				<span>
+					{title}
+					{this.props.page.isLoading ? <i className='ri-loader-3-line' /> : undefined}
+				</span>
+				<a className='tab__close' onClick={this.props.onClose}><i className='ri-close-line' /></a>
+			</div>
+		)
 	}
 })
 
@@ -18,7 +21,7 @@ var BrowserTabs = React.createClass({
 			<a className='search' onClick={this.props.onClose}><i className='ri-search-line' /></a>
 			{/* <a className="minimize" onClick={this.props.onMinimize}><i className='ri-indeterminate-circle-line' /></a>
 			<a className="maximize" onClick={this.props.onMaximize}><i className='ri-add-circle-line' /></a> */}
-			<a className="newtab" onClick={this.props.onNewTab}><i className='ri-add-line ri-lg' /></a>
+			<a className='newTab' onClick={this.props.onNewTab}><i className='ri-add-line ri-lg' /></a>
 			{this.props.pages.map(function (page, i) {
 				if (!page)
 					return

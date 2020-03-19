@@ -1,4 +1,5 @@
 const { app, BrowserWindow, session } = require('electron') //ES5
+const { platform, release } = require('os')
 
 // app.commandLine.appendSwitch('proxy-server', 'socks5://127.0.0.1:9050')
 
@@ -32,10 +33,10 @@ app.on('ready', function () {
 	// })
 
 	mainWindow = new BrowserWindow({
-		width: 1030, 
-		height: 720, 
+		width: 1920, 
+		height: 1000, 
 		frame: false,
-		transparent: true,
+		// transparent: true,
 		webPreferences: { 
 			nodeIntegration: true,
 			webSecurity: true,

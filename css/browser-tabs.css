@@ -5,6 +5,7 @@
   -webkit-app-region: drag;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  height: 35px;
 }
 #browser-tabs > div {
   -webkit-app-region: no-drag;
@@ -28,7 +29,7 @@
 }
 #browser-tabs > div > span {
   flex: 1;
-  padding: 6px 0 4px 12px;
+  padding: 10px 0 4px 7px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -42,10 +43,7 @@
   cursor: pointer;
   float: right;
 }
-#browser-tabs > div > a:hover {
-  background: rgb(245, 119, 119);
-  color: #fff;
-}
+
 #browser-tabs > a {
   -webkit-app-region: no-drag;
   display: inline-block;
@@ -54,14 +52,7 @@
   cursor: pointer;
   margin: 6px 4px;
 }
-#browser-tabs > a.newtab {
-  padding: 8px 12px 5px 10px;
-  margin: 0;
-}
-#browser-tabs > a.newtab:hover {
-  color: #fff;
-  background: rgb(99, 190, 229);
-}
+
 #browser-tabs > a.maximize {
   color: rgb(32, 205, 20);
   text-shadow: 0 0 1px rgba(8, 77, 3, 1);
@@ -76,13 +67,14 @@
 #browser-tabs > a.minimize i {
   font-size: 12.5px
 }
+
 #browser-tabs > a.search {
 	color: #323232;
 	background: #eeeeee;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
-	margin: 0px 8px 4px 8px;
-	padding: 8px 10px 6px 10px;
+	margin: 0px 8px;
+	padding: 10px 12px;
 	cursor: pointer;
 }
 
@@ -91,6 +83,36 @@
 }
 
 #browser-tabs > a.search i {
-	  font-size: 12px;
-	  font-weight: bold;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#browser-tabs > a.newTab {
+	color: #BEBEBE;
+	padding: 8px 12px 5px 10px;
+	margin: 0;
+	font-size: 12px;
+	cursor: pointer;
+}
+#browser-tabs > a.newTab:hover {
+	color: #323232;
+}
+
+#browser-tabs > div > img.tab__favicon {
+	width: 18px;
+	height: 18px;
+	border: 0;
+	outline: 0;
+	margin: 8px 6px 8px 12px;
+}
+
+#browser-tabs > div > a.tab__close {
+	margin: 3px auto;
+	font-size: 18px;
+	color: #BEBEBE;
+	cursor: pointer;
+}
+
+#browser-tabs > div > a.tab__close:hover {
+	color: #323232;
 }

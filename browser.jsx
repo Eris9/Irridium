@@ -7,6 +7,7 @@ function createPageObject(location) {
 	return {
 		location: location || 'https://reddit.com',
 		statusText: false,
+		favicon: null,
 		title: 'new tab',
 		isLoading: false,
 		isSearching: false,
@@ -213,7 +214,7 @@ var BrowserChrome = React.createClass({
 	pageHandlers: {
 		onDidStartLoading: function (e, page) {
 			page.isLoading = true
-			page.title = false
+			// page.title = false
 			this.setState(this.state)
 		},
 		onDomReady: function (e, page, pageIndex) {
@@ -239,6 +240,11 @@ var BrowserChrome = React.createClass({
 			var page = this.getPageObject()
 			page.title = e.title
 			page.location = this.getWebView().getURL()
+			this.setState(this.state)
+		},
+		onPageFaviconSet: function (e) {
+			var page = this.getPageObject()
+			page.favicon = e.favicons[0]
 			this.setState(this.state)
 		},
 		onContextMenu: function (e, page, pageIndex) {
