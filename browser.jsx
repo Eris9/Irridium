@@ -212,9 +212,10 @@ var BrowserChrome = React.createClass({
 		}
 	},
 	pageHandlers: {
-		onDidStartLoading: function (e, page) {
+		onDidStartLoading: function (e, page, pageIndex) {
 			page.isLoading = true
-			// page.title = false
+			var webview = this.getWebView(pageIndex)
+			page.title = webview.getTitle()
 			this.setState(this.state)
 		},
 		onDomReady: function (e, page, pageIndex) {

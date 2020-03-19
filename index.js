@@ -36,11 +36,11 @@ app.on('ready', function () {
 		width: 1920, 
 		height: 1000, 
 		frame: false,
-		// transparent: true,
 		webPreferences: { 
 			nodeIntegration: true,
 			webSecurity: true,
-			webviewTag: true
+			webviewTag: true,
+			enableRemoteModule: true
 		}
 	})
 
