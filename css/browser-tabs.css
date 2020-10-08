@@ -25,7 +25,7 @@
 
 #browser-tabs > div.active {
   -webkit-app-region: drag;
-  background: #F5F5F5;
+  /* background: #F5F5F5; */
   color: #555;
 }
 #browser-tabs > div > span {

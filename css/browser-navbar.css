@@ -42,19 +42,33 @@
 #browser-navbar .input-group {
   flex: 1;
   display: flex;
-  margin: 0 5px;
+  margin: 0 10px;
+  background: #ffffff;
+  border: 2px solid #EDEDED;
+  border-radius: 20px;
+  margin: 4px 20px;
+  max-height: 40px;
+  /* padding: 0 5px; */
+}
+
+#browser-navbar .input-group .icon {
+	color: #D1D1D1;
+	font-weight: bold;
+	font-size: 16px;
+	margin: 8px 10px 8px 15px;
+}
+
+#browser-navbar .input-group .icon:last-of-type {
+	margin: 8px 15px 8px 10px;
 }
 
 #browser-navbar .input-group input {
   flex: 1;
-  margin: 4px 0 3px;
-  padding: 0 5px;
   font-size: 14px;
   color: #808080;
   outline: 0;
-  background: #ffffff;
-  border: 2px solid #EDEDED;
-  border-radius: 20px;
+  border: 0;
+  padding-left: 10px;
 }
 
 #browser-navbar .input-group input:focus, 
