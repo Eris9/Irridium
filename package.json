@@ -17,7 +17,7 @@
 	"author": "Chiru B <chirub@foretag.co>",
 	"license": "MIT",
 	"dependencies": {
-		"electron": "^9.0.0-beta.9",
+		"electron": "^9.4.0",
 		"minimist": "^1.2.5",
 		"remixicon": "^2.3.0",
 		"user-agents": "^1.0.559",
