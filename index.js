@@ -44,11 +44,10 @@ app.on('ready', function () {
 		}
 	})
 
-	mainWindow.loadURL('file://' + require('path').join(__dirname, 'browser.html'))
+	mainWindow.loadFile("browser.html")
 
 	// mainWindow.webContents.openDevTools()
 	mainWindow.on('closed', function () {
 		mainWindow = null
 	})
 })
-

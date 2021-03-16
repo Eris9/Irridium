@@ -5,7 +5,7 @@ var urllib = require('url')
 
 function createPageObject(location) {
 	return {
-		location: location || 'https://reddit.com',
+		location: location || 'https://duckduckgo.com/?va=b&t=hc',
 		statusText: false,
 		favicon: null,
 		title: 'new tab',
