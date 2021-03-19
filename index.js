@@ -44,7 +44,7 @@ app.on('ready', function () {
 		}
 	})
 
-	mainWindow.loadFile("browser.html")
+	mainWindow.loadFile("C:\Program Files (x86)\Irridium")
 
 	// mainWindow.webContents.openDevTools()
 	mainWindow.on('closed', function () {
